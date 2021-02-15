@@ -36,15 +36,15 @@ print("Задача 1.3")
 
 def f31(n, m):
     sum1 = 0
-    for i in range(1, n):
-        for j in range(1, m):
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
             sum1 += (cos(j) - (i ** 4))
     return sum1
 
 def f32(n, m):
     sum2 = 0
-    for i in range(1, n):
-        for j in range(1, m):
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
             sum2 += (j + (j ** 4))
     return sum2
 
