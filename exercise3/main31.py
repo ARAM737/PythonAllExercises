@@ -1,4 +1,5 @@
 import struct
+import pprint
 
 D_SIZE = 2 + 2 + 8 + 2 + 4 * 7 + 8
 C_SIZE = 4 + 2 + 8 + 4
@@ -61,9 +62,17 @@ def parse_a(offset, byte_string):
             'A4': a345_parsed[2],
             'A5': a345_parsed[3],
             'A6': a6_parsed,
-            'A7': a7_parsed,
+            'A7': list(a7_parsed),
             }
 
 
 def f31(byte_string):
     return parse_a(3, byte_string)
+
+
+pprint.pprint(f31(b'JIJ\x006\x00:\x00>\x00B+\x8d\x00\x02\x00\x00\x00FL\x06\xeb\xdb\x06'
+                  b'\xe9\x80\xef\x87\x95\x96\xa4\xdd1\xdc\xc1\x98\x1e|\xed\xd3)\x97\x00\x00'
+                  b'\x00H?\x1f\x9d`?O\x9d[\x82q\x01\xdf\xdd\xc6\xc2\x1co\x13\xf8\xe3\xbe\xa1'
+                  b'\xb6\xefroUg\x16\x0c\xbf\xc5\xb7\xa4\xd3\xde!\xd09\xb4]\xe9.s\xab:'
+                  b'\x9f\x08f\xa1xbl\r\x9e\x0fu\xf7\xe9\xb5\xc1Q2N\xb5\x93V\xb3WW!/\x8f-'
+                  b'\x02\x03'))
