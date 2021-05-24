@@ -43,7 +43,7 @@ def parse_a(offset, byte_string):
     a1_parsed = struct.unpack('>HHHH', a1_bytes)
     a1_list = [parse_b(arr, byte_string) for arr in a1_parsed]
     a2_bytes = byte_string[offset + 8:offset + 8 + 2]
-    a2_parsed = struct.unpack('>H', a2_bytes)
+    a2_parsed = struct.unpack('>' + 'h', a2_bytes)
     a345_bytes = byte_string[offset + 10:offset + 25]
     a345_bytes = byte_string[offset + 10:offset + 25]
     a345_parsed = struct.unpack('>HIbQ', a345_bytes)
