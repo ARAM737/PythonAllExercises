@@ -1,0 +1,15 @@
+from exercise3.C32 import C32
+
+o = C32()
+o.place()
+o.place()
+o.place()
+o.place()
+o.place()
+o.move()
+o.move()
+o.place()
+o.place()
+o.move()
+o.place()
+o.move()

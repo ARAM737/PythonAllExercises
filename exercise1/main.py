@@ -1,4 +1,4 @@
-from math import sin, cos, e, log1p, tan, fabs
+from math import *
 
 ##1.1
 print("Задача 1.1")
